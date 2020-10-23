@@ -72,6 +72,9 @@ class App extends Component {
   render() {
     //debugger;
     //console.log(JSON.stringify(this.state.data))
+    let renderlabel = function (){
+      return this.state.data.length;
+    }
     return (
 
       <AreaChart width={900} height={500} data={this.state.data}
@@ -89,8 +92,9 @@ class App extends Component {
         <XAxis dataKey="month" />
         <YAxis />
         <Tooltip />
-        <Area type="monotone" dataKey="cupcakes" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+        <Area label ={renderlabel} type="monotone" dataKey="cupcakes" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
       </AreaChart>
+
     );
   }
 }
