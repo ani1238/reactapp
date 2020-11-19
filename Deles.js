@@ -8,7 +8,7 @@ class Deles extends Component {
             var AWS = require('aws-sdk');
             let dis = this;
             // you shouldn't hardcode your keys in production! See http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html
-            AWS.config.update({ accessKeyId: 'AKIA6HDERDCENDQIA7EN', secretAccessKey: '3jpDVRyKcBMK+Z1WfIu8evMySk11ILiGyaV/W9+e' });
+            AWS.config.update({ accessKeyId: 'AKIA6HDERDCELTAOD6GK', secretAccessKey: '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' });
             AWS.config.update({ region: 'us-east-2' });
             var lambda = new AWS.Lambda();
             var params = {

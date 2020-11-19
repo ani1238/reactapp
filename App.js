@@ -23,8 +23,7 @@ class App extends Component {
     var AWS = require('aws-sdk');
     let dis = this;
     // you shouldn't hardcode your keys in production! See http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html
-    AWS.config.update({ accessKeyId: 'AKIA6HDERDCENDQIA7EN', secretAccessKey: '3jpDVRyKcBMK+Z1WfIu8evMySk11ILiGyaV/W9+e' });
-    AWS.config.update({ region: 'us-east-2' });
+    AWS.config.update({ accessKeyId: 'AKIA6HDERDCELTAOD6GK', secretAccessKey: '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' });    AWS.config.update({ region: 'us-east-2' });
     var lambda = new AWS.Lambda();
     var params = {
       FunctionName: 'es-to-json', /* required */
@@ -72,9 +71,6 @@ class App extends Component {
   render() {
     //debugger;
     //console.log(JSON.stringify(this.state.data))
-    let renderlabel = function (){
-      return this.state.data.length;
-    }
     return (
 
       <AreaChart width={900} height={500} data={this.state.data}
@@ -92,7 +88,7 @@ class App extends Component {
         <XAxis dataKey="month" />
         <YAxis />
         <Tooltip />
-        <Area label ={renderlabel} type="monotone" dataKey="cupcakes" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+        <Area type="monotone" dataKey="cupcakes" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
       </AreaChart>
 
     );
